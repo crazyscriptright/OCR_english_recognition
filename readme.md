@@ -1,4 +1,4 @@
-# Name Recognition with Machine Learning
+# Name Recognition Using Machine Learning
 
 This project demonstrates a machine learning-based approach to recognize names in textual data. It leverages natural language processing (NLP) techniques and machine learning algorithms to classify words as names or non-names.
 
