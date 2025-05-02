@@ -6,6 +6,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from PIL import Image
 
+
 # Define the CNNtoRNN model architecture (same as before)
 class CNNtoRNN(nn.Module):
     def __init__(self, num_of_characters):
@@ -105,7 +106,7 @@ uploaded_file = st.file_uploader("Choose an image file", type=["jpg", "jpeg", "p
 if uploaded_file:
     # Display the uploaded image
     image = Image.open(uploaded_file).convert("L")
-    st.image(image, caption="Uploaded Image", use_column_width=True)
+    st.image(image, caption="Uploaded Image", use_container_width=True)
 
     # Load the model
     model_path = "model_60 (1).pth"  # Update with your model path

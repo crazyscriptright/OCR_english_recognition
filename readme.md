@@ -1,71 +1,72 @@
-# Name Recognition Using Machine Learning
+# Image OCR Demo
 
-This project demonstrates a machine learning-based approach to recognize names in textual data. It leverages natural language processing (NLP) techniques and machine learning algorithms to classify words as names or non-names.
+This project is a Streamlit-based application for Optical Character Recognition (OCR). It allows users to upload an image and extracts text from it using a deep learning model.
 
-## Project Overview
+## Features
 
-The notebook contains the following key steps:
+- **Image Upload**: Upload images in `.jpg`, `.jpeg`, or `.png` formats.
+- **OCR Processing**: Processes the uploaded image and extracts text using a CNN-to-RNN model.
+- **Preprocessing**: Includes image preprocessing such as contrast enhancement, adaptive thresholding, and resizing.
+- **Streamlit UI**: Interactive web interface for easy usage.
 
-1. **Data Loading and Preprocessing**
-   - Load and prepare text data for training and testing.
-   - Tokenize text and apply vectorization techniques to transform textual data into numerical features.
+## How It Works
 
-2. **Feature Engineering**
-   - Generate features to improve name recognition, including contextual and linguistic information.
+1. **Image Upload**: Users upload an image via the Streamlit interface.
+2. **Preprocessing**: The image is preprocessed to enhance OCR accuracy.
+3. **Model Inference**: A trained CNN-to-RNN model predicts the text in the image.
+4. **Output**: The recognized text is displayed on the web interface.
 
-3. **Model Selection and Training**
-   - Train a machine learning model (e.g., Logistic Regression, SVM, or other classifiers) using labeled data.
-   - Evaluate the model's performance on validation and test sets.
+## Requirements
 
-4. **Evaluation and Results**
-   - Use metrics like precision, recall, F1-score, and accuracy to assess model performance.
-   - Visualize the results for better interpretability.
+- Python 3.8+
+- Streamlit
+- PyTorch
+- OpenCV
+- NumPy
+- Pillow
 
-## Prerequisites
+## Installation
 
-To run the notebook, ensure you have the following installed:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/image-ocr-demo.git
+   cd image-ocr-demo
+   ```
 
-- Python 3.7 or higher
-- Jupyter Notebook or Jupyter Lab
-- Required Python libraries:
-  - `numpy`
-  - `pandas`
-  - `scikit-learn`
-  - `matplotlib`
-  - `nltk`
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-You can install the dependencies using the following command:
+3. Run the application:
+   ```bash
+   streamlit run googleimgtest.py
+   ```
 
-```bash
-pip install numpy pandas scikit-learn matplotlib nltk
-```
+## Model
 
-## Getting Started
+The application uses a CNN-to-RNN model for OCR. Ensure the model file (`model_60 (1).pth`) is in the project directory.
 
-1. Clone this repository or download the notebook file (`name-recognition.ipynb`).
-2. Open the notebook in Jupyter Notebook or Jupyter Lab.
-3. Follow the cells sequentially to:
-   - Load and preprocess the data.
-   - Train the name recognition model.
-   - Evaluate and interpret the results.
+## File Structure
 
-## Dataset
+- `googleimgtest.py`: Main application script.
+- `model_60 (1).pth`: Pre-trained model file.
+- `requirements.txt`: List of dependencies.
 
-The dataset used for this project must contain labeled text, where each word or token is annotated as a name or non-name. Ensure the dataset is preprocessed correctly to align with the notebook's format.
+## Example
 
-## Customization
+1. Upload an image:
+   ![Upload Example](example-upload.png)
 
-- Replace the dataset path in the notebook with your dataset.
-- Modify feature engineering or model hyperparameters to experiment with different configurations.
-
-## Results
-
-The notebook includes sections to display model performance metrics and visualizations. Customize these sections to suit your data and use case.
-
-## Contribution
-
-Feel free to submit issues or pull requests if you have suggestions for improvement or additional features.
+2. View the OCR output:
+   ![OCR Output](example-output.png)
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License.
+
+## Acknowledgments
+
+- PyTorch for the deep learning framework.
+- Streamlit for the web interface.
+- OpenCV for image preprocessing.
